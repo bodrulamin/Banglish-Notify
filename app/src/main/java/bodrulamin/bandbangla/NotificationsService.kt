@@ -67,7 +67,7 @@ class NotificationsService : NotificationListenerService() {
             msgInfo.putExtra("icon", byteArray)
         }
 
-        if (packageName == "com.whatsapp" ) {
+        if (packageName == "com.whatsapp" || packageName ==  "com.facebook.orca") {
             var ntitle = reverseParser.parse(title)
             var ntext = reverseParser.parse(text)
             notifyThis(ntitle, ntext)
